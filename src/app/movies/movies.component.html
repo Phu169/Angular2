@@ -1,15 +1,6 @@
-<h1>Movie's Detail :</h1>
-<div><span>id: </span>{{movie.id}}</div>
-<div><span>name: </span>{{movie.name | uppercase}}</div>
-<div><span>releaseYear: </span>{{movie.releaseYear}}</div>
-
-<h2>Enter your infomation:</h2>
-<div style="margin: 10px; text-align: left">
-  <label>Movie name (data-binding one-way):
-    <input [ngModel]="movie.name" placeholder="Enter movie's name ..."/>
-  </label>
-</div><div style="margin: 10px; text-align: left">
-  <label>releaseYear (data-binding two-way):
-    <input [(ngModel)]="movie.releaseYear" placeholder="Enter release year ..."/>
-  </label>
-</div>
+<h2>My Favorite Movies</h2>
+<ol class="movies">
+  <li class="movieListItem" *ngFor="let eachMovie of movies">
+    {{eachMovie.name}} - {{eachMovie.releaseYear }}
+  </li>
+</ol>
